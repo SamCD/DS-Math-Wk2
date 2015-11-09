@@ -226,4 +226,43 @@ X <- dfx(1) - dfx(-1) #integrate on the range
 # 0
 
 #c
-X <- dfx(4) - dfx(2)
+X <- pexp(2,0.25*x,lower.tail=FALSE ~ x)
+# 0.6321206
+
+#d
+X <- dfx(3) - dfx(1)
+#1
+
+#e
+EX <- dfx(1) - dfx(0)
+# 0.125
+
+#f
+var <- EX - EX^2
+sd <- sqrt(var)
+#0.109375, 0.3307189
+
+#Q2
+fx <- function(x){(3/2) * x^2}
+dfx <- antiD((3/2) * x^2 ~ x)
+#a
+X <- dfx(0) - dfx(-2)
+integrate(dfx,-2,0)
+
+#b
+X <- pexp(-0.5,(3/2) * x^2,lower.tail=FALSE ~ x)
+# 0
+
+#c
+X <- dfx(.5) - dfx(-.5)
+# 0.125
+
+#d
+EX <- dfx(1) - dfx(0)
+# 0.5
+
+#e
+var <- EX - EX^2
+sd <- sqrt(var)
+# 0.25,0.5
+
